@@ -1,15 +1,14 @@
 package springtest.di.ioc.xml;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class Main {
 
 	public static void main(String[] args) {
 		
-		C c =new C();
-		
-		B b =new B();
-		b.setC(c);
-		
-		A a = new A(b);
+		ClassPathXmlApplicationContext context = 
+				new ClassPathXmlApplicationContext("beans.xml");
+		A a = context.getBean(A.class);
 		a.a();
 	}
 

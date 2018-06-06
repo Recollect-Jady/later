@@ -7,7 +7,7 @@ public class A {
 		this.b=b;
 	}
 	public void a() {
-		System.out.println("a");
+		System.out.println("ioc xml a");
 		b.b();
 	}
 }
