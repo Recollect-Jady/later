@@ -19,7 +19,8 @@ public class Main {
 		D d2= context.getBean(D.class);
 		System.out.println("d和d2 是同一个吗?"+(d==d2));
 		//false  说明scope=prototype,每次获取都会新创建一个
-		
+		ShortMessageService sms = context.getBean(ShortMessageService.class);
+		sms.send("15200907851", "你好");
 	}
 
 }
